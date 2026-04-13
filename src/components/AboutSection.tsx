@@ -1,5 +1,5 @@
 import aboutImg from "@/assets/about-dealership.jpg";
-import logo from "@/assets/logo.jpg";
+import logo from "@/assets/logo-clean.png";
 
 const AboutSection = () => (
   <section id="sobre" className="py-24 border-t border-border">
@@ -8,9 +8,8 @@ const AboutSection = () => (
         <div className="relative rounded-xl overflow-hidden aspect-[4/3]">
           <img src={aboutImg} alt="Lourenço Motors" className="w-full h-full object-cover" loading="lazy" width={1280} height={720} />
           <div className="absolute inset-0 bg-gradient-to-t from-background/50 to-transparent" />
-          {/* Logo overlay */}
           <div className="absolute bottom-6 left-6">
-            <img src={logo} alt="Lourenço Motors" className="h-14 w-auto opacity-90" />
+            <img src={logo} alt="Lourenço Motors" className="h-10 w-auto opacity-80" />
           </div>
         </div>
 

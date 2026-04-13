@@ -1,10 +1,10 @@
 import { Instagram, Facebook } from "lucide-react";
-import logo from "@/assets/logo.jpg";
+import logo from "@/assets/logo-clean.png";
 
 const Footer = () => (
   <footer className="border-t border-border py-10">
     <div className="container mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
-      <img src={logo} alt="Lourenço Motors" className="h-10 w-auto" />
+      <img src={logo} alt="Lourenço Motors" className="h-8 w-auto opacity-80" />
       
       <p className="text-[10px] text-muted-foreground uppercase tracking-widest">
         © {new Date().getFullYear()} Lourenço Motors Automotive

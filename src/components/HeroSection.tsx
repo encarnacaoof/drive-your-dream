@@ -1,18 +1,16 @@
-import heroImage from "@/assets/hero-showroom.jpg";
-import logo from "@/assets/logo.jpg";
+import heroImage from "@/assets/hero-dealership.jpg";
+import logo from "@/assets/logo-clean.png";
 
 const HeroSection = () => (
   <section id="inicio" className="relative min-h-screen flex items-center overflow-hidden">
-    {/* Background image */}
     <div className="absolute inset-0">
-      <img src={heroImage} alt="Showroom" className="w-full h-full object-cover" width={1920} height={1080} />
-      <div className="absolute inset-0 bg-background/70" />
+      <img src={heroImage} alt="Stand de automóveis" className="w-full h-full object-cover" width={1920} height={1080} />
+      <div className="absolute inset-0 bg-background/65" />
     </div>
 
     <div className="relative z-10 container mx-auto pt-20">
       <div className="max-w-2xl">
-        {/* Logo */}
-        <img src={logo} alt="Lourenço Motors" className="h-20 md:h-28 w-auto mb-8" />
+        <img src={logo} alt="Lourenço Motors" className="h-16 md:h-24 w-auto mb-8 opacity-90" />
         
         <h1 className="font-heading text-4xl md:text-6xl lg:text-7xl font-bold uppercase leading-[0.95] mb-6 tracking-tight">
           O seu próximo
@@ -33,8 +31,7 @@ const HeroSection = () => (
           </a>
         </div>
 
-        {/* Minimal stats */}
-        <div className="flex gap-8 mt-14 pt-8 border-t border-border">
+        <div className="flex gap-8 mt-14 pt-8 border-t border-foreground/10">
           {[
             { n: "30+", l: "Anos" },
             { n: "160+", l: "Viaturas" },
