@@ -14,7 +14,7 @@ export default {
     },
     extend: {
       fontFamily: {
-        heading: ['"Playfair Display"', 'serif'],
+        heading: ['Oswald', 'sans-serif'],
         body: ['Inter', 'sans-serif'],
       },
       colors: {
@@ -50,11 +50,6 @@ export default {
         card: {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
-        },
-        gold: {
-          DEFAULT: "hsl(var(--gold))",
-          light: "hsl(var(--gold-light))",
-          dark: "hsl(var(--gold-dark))",
         },
         "surface-elevated": "hsl(var(--surface-elevated))",
         sidebar: {
