@@ -1,59 +1,54 @@
 import heroImage from "@/assets/hero-showroom.jpg";
-import { ChevronDown } from "lucide-react";
+import logo from "@/assets/logo.jpg";
 
-const HeroSection = () => {
-  return (
-    <section id="inicio" className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      <div className="absolute inset-0">
-        <img src={heroImage} alt="Lourenço Motors Showroom" className="w-full h-full object-cover" width={1920} height={1080} />
-        <div className="absolute inset-0 bg-gradient-to-b from-background/80 via-background/50 to-background" />
-        {/* Red overlay tint */}
-        <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-transparent to-primary/5" />
-      </div>
+const HeroSection = () => (
+  <section id="inicio" className="relative min-h-screen flex items-center overflow-hidden">
+    {/* Background image */}
+    <div className="absolute inset-0">
+      <img src={heroImage} alt="Showroom" className="w-full h-full object-cover" width={1920} height={1080} />
+      <div className="absolute inset-0 bg-background/70" />
+    </div>
 
-      <div className="relative z-10 container mx-auto px-4 text-center pt-20">
-        <div className="animate-fade-up" style={{ animationDelay: "0.2s", opacity: 0 }}>
-          <p className="text-primary font-body text-sm md:text-base tracking-[0.3em] uppercase mb-4 font-semibold">
-            Há mais de 30 anos no mercado
-          </p>
-        </div>
-        <h1 className="animate-fade-up font-heading text-5xl md:text-7xl lg:text-8xl font-bold leading-none mb-6 uppercase" style={{ animationDelay: "0.4s", opacity: 0 }}>
-          O Seu Próximo Carro
+    <div className="relative z-10 container mx-auto pt-20">
+      <div className="max-w-2xl">
+        {/* Logo */}
+        <img src={logo} alt="Lourenço Motors" className="h-20 md:h-28 w-auto mb-8" />
+        
+        <h1 className="font-heading text-4xl md:text-6xl lg:text-7xl font-bold uppercase leading-[0.95] mb-6 tracking-tight">
+          O seu próximo
           <br />
-          <span className="text-gradient-red">Está Aqui</span>
+          <span className="text-primary">carro está aqui</span>
         </h1>
-        <p className="animate-fade-up text-muted-foreground text-base md:text-lg max-w-2xl mx-auto mb-10" style={{ animationDelay: "0.6s", opacity: 0 }}>
-          Mais de 160 viaturas disponíveis. Compra, venda, troca, consignação, consultoria e importação automóvel com total confiança.
+
+        <p className="text-muted-foreground text-sm md:text-base max-w-md mb-8 leading-relaxed">
+          Mais de 160 viaturas disponíveis. 30 anos de experiência em compra, venda, troca e importação automóvel.
         </p>
-        <div className="animate-fade-up flex flex-col sm:flex-row gap-4 justify-center" style={{ animationDelay: "0.8s", opacity: 0 }}>
-          <a href="#viaturas" className="inline-flex items-center justify-center px-8 py-4 bg-gradient-red text-primary-foreground font-semibold text-sm uppercase tracking-wider rounded-lg hover:opacity-90 transition-opacity shadow-red">
+
+        <div className="flex flex-wrap gap-3">
+          <a href="#viaturas" className="px-6 py-3 bg-primary text-primary-foreground text-xs font-semibold uppercase tracking-widest rounded-lg hover:bg-primary/90 transition-colors">
             Ver Viaturas
           </a>
-          <a href="tel:+351910338655" className="inline-flex items-center justify-center px-8 py-4 border border-red text-primary font-semibold text-sm uppercase tracking-wider rounded-lg hover:bg-primary/10 transition-colors">
+          <a href="tel:+351910338655" className="px-6 py-3 border border-border text-foreground text-xs font-semibold uppercase tracking-widest rounded-lg hover:border-primary hover:text-primary transition-colors">
             Ligar Agora
           </a>
         </div>
 
-        <div className="animate-fade-up mt-16 grid grid-cols-2 md:grid-cols-4 gap-6 max-w-3xl mx-auto" style={{ animationDelay: "1s", opacity: 0 }}>
+        {/* Minimal stats */}
+        <div className="flex gap-8 mt-14 pt-8 border-t border-border">
           {[
-            { value: "30+", label: "Anos de Experiência" },
-            { value: "160+", label: "Viaturas Disponíveis" },
-            { value: "4.8★", label: "Google Reviews" },
-            { value: "8.1K", label: "Seguidores Instagram" },
-          ].map((stat) => (
-            <div key={stat.label} className="text-center">
-              <div className="text-2xl md:text-3xl font-heading font-bold text-gradient-red">{stat.value}</div>
-              <div className="text-xs text-muted-foreground mt-1 uppercase tracking-wide">{stat.label}</div>
+            { n: "30+", l: "Anos" },
+            { n: "160+", l: "Viaturas" },
+            { n: "4.8★", l: "Google" },
+          ].map((s) => (
+            <div key={s.l}>
+              <div className="font-heading text-2xl md:text-3xl font-bold text-primary">{s.n}</div>
+              <div className="text-[10px] text-muted-foreground uppercase tracking-widest mt-1">{s.l}</div>
             </div>
           ))}
         </div>
       </div>
-
-      <a href="#viaturas" className="absolute bottom-8 left-1/2 -translate-x-1/2 text-muted-foreground animate-bounce">
-        <ChevronDown className="w-6 h-6" />
-      </a>
-    </section>
-  );
-};
+    </div>
+  </section>
+);
 
 export default HeroSection;

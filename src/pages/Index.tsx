@@ -9,7 +9,7 @@ import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
 
 const Index = () => (
-  <div className="min-h-screen">
+  <main className="min-h-screen">
     <Navbar />
     <HeroSection />
     <InventoryPreview />
@@ -19,7 +19,7 @@ const Index = () => (
     <ContactSection />
     <Footer />
     <WhatsAppButton />
-  </div>
+  </main>
 );
 
 export default Index;
