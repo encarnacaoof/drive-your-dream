@@ -17,20 +17,22 @@ const HeroSection = () => (
     <div className="absolute left-0 top-1/4 h-1/2 w-1 bg-primary z-10" />
 
     <div className="relative z-10 container mx-auto pt-20">
-      <div className="max-w-2xl pl-6">
+      <div className="max-w-3xl pl-6">
 
         <div className="flex items-center gap-3 mb-6">
           <div className="h-px w-10 bg-primary" />
           <span className="text-primary text-xs font-semibold uppercase tracking-widest">Lourenço Motors</span>
         </div>
 
-        <h1 className="font-heading text-5xl md:text-7xl lg:text-8xl font-bold uppercase leading-[0.9] mb-6 tracking-tight">
-          O seu próximo
-          <br />
-          <span className="text-primary">carro está aqui</span>
+        <h1 className="font-heading font-bold uppercase leading-[0.9] mb-6 tracking-tight">
+          <span className="text-6xl md:text-8xl lg:text-9xl text-white block mb-2">O SEU PRÓXIMO</span>
+          <span className="text-6xl md:text-8xl lg:text-9xl block mb-2">
+            <span className="bg-primary text-white px-4 py-1">CARRO</span>
+          </span>
+          <span className="text-6xl md:text-8xl lg:text-9xl text-white block">ESTÁ AQUI</span>
         </h1>
 
-        <p className="text-muted-foreground text-sm md:text-base max-w-md mb-10 leading-relaxed">
+        <p className="text-muted-foreground text-sm md:text-base max-w-md mb-10 leading-relaxed mt-8">
           Mais de 160 viaturas disponíveis. 30 anos de experiência em compra, venda, troca e importação automóvel.
         </p>
 
