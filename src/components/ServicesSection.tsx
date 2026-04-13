@@ -13,16 +13,16 @@ const ServicesSection = () => (
   <section id="servicos" className="py-20 md:py-28">
     <div className="container mx-auto px-4">
       <div className="text-center mb-16">
-        <p className="text-primary text-sm tracking-[0.3em] uppercase mb-3">O Que Fazemos</p>
-        <h2 className="font-heading text-3xl md:text-5xl font-bold">
-          Os Nossos <span className="text-gradient-gold">Serviços</span>
+        <p className="text-primary text-sm tracking-[0.3em] uppercase mb-3 font-semibold">O Que Fazemos</p>
+        <h2 className="font-heading text-3xl md:text-5xl font-bold uppercase">
+          Os Nossos <span className="text-gradient-red">Serviços</span>
         </h2>
       </div>
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
         {services.map((s) => (
-          <div key={s.title} className="group p-8 rounded-xl bg-card border border-border hover:border-gold transition-all duration-500 hover:shadow-gold">
+          <div key={s.title} className="group p-8 rounded-xl bg-card border border-border hover:border-red transition-all duration-500 hover:shadow-red">
             <s.icon className="w-10 h-10 text-primary mb-5 group-hover:scale-110 transition-transform duration-300" />
-            <h3 className="font-heading text-xl font-semibold mb-3">{s.title}</h3>
+            <h3 className="font-heading text-xl font-semibold mb-3 uppercase">{s.title}</h3>
             <p className="text-muted-foreground text-sm leading-relaxed">{s.desc}</p>
           </div>
         ))}
