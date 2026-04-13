@@ -5,54 +5,40 @@ const HeroSection = () => (
   <section id="inicio" className="relative min-h-screen flex items-center overflow-hidden">
     <div className="absolute inset-0">
       <img src={heroImage} alt="Stand de automóveis" className="w-full h-full object-cover" width={1920} height={1080} />
-      <div className="absolute inset-0 bg-background/75" />
+      <div className="absolute inset-0 bg-background/65" />
     </div>
-
-    {/* Logótipo canto superior direito */}
-    <div className="absolute top-6 right-6 z-20">
-      <img src={logo} alt="Lourenço Motors" className="h-16 md:h-20 w-auto opacity-95" />
-    </div>
-
-    {/* Linha vermelha lateral */}
-    <div className="absolute left-0 top-1/4 h-1/2 w-1 bg-primary z-10" />
 
     <div className="relative z-10 container mx-auto pt-20">
-      <div className="max-w-3xl pl-6">
-
-        <div className="flex items-center gap-3 mb-6">
-          <div className="h-px w-10 bg-primary" />
-          <span className="text-primary text-xs font-semibold uppercase tracking-widest">Lourenço Motors</span>
-        </div>
-
-        <h1 className="font-heading font-bold uppercase leading-[0.9] mb-6 tracking-tight">
-          <span className="text-6xl md:text-8xl lg:text-9xl text-white block mb-2">O SEU PRÓXIMO</span>
-          <span className="text-6xl md:text-8xl lg:text-9xl block mb-2">
-            <span className="bg-primary text-white px-4 py-1">CARRO</span>
-          </span>
-          <span className="text-6xl md:text-8xl lg:text-9xl text-white block">ESTÁ AQUI</span>
+      <div className="max-w-2xl">
+        <img src={logo} alt="Lourenço Motors" className="h-16 md:h-24 w-auto mb-8 opacity-90" />
+        
+        <h1 className="font-heading text-4xl md:text-6xl lg:text-7xl font-bold uppercase leading-[0.95] mb-6 tracking-tight">
+          O seu próximo
+          <br />
+          <span className="text-primary">carro está aqui</span>
         </h1>
 
-        <p className="text-muted-foreground text-sm md:text-base max-w-md mb-10 leading-relaxed mt-8">
+        <p className="text-muted-foreground text-sm md:text-base max-w-md mb-8 leading-relaxed">
           Mais de 160 viaturas disponíveis. 30 anos de experiência em compra, venda, troca e importação automóvel.
         </p>
 
         <div className="flex flex-wrap gap-3">
-          <a href="#viaturas" className="px-8 py-4 bg-primary text-primary-foreground text-xs font-bold uppercase tracking-widest rounded-lg hover:bg-primary/90 transition-colors">
+          <a href="#viaturas" className="px-6 py-3 bg-primary text-primary-foreground text-xs font-semibold uppercase tracking-widest rounded-lg hover:bg-primary/90 transition-colors">
             Ver Viaturas
           </a>
-          <a href="tel:+351910338655" className="px-8 py-4 border border-border text-foreground text-xs font-bold uppercase tracking-widest rounded-lg hover:border-primary hover:text-primary transition-colors">
+          <a href="tel:+351910338655" className="px-6 py-3 border border-border text-foreground text-xs font-semibold uppercase tracking-widest rounded-lg hover:border-primary hover:text-primary transition-colors">
             Ligar Agora
           </a>
         </div>
 
-        <div className="flex gap-10 mt-16 pt-8 border-t border-foreground/10">
+        <div className="flex gap-8 mt-14 pt-8 border-t border-foreground/10">
           {[
-            { n: "30+", l: "Anos de Experiência" },
-            { n: "160+", l: "Viaturas Disponíveis" },
-            { n: "4.8★", l: "Avaliação Google" },
+            { n: "30+", l: "Anos" },
+            { n: "160+", l: "Viaturas" },
+            { n: "4.8★", l: "Google" },
           ].map((s) => (
             <div key={s.l}>
-              <div className="font-heading text-3xl md:text-4xl font-bold text-primary">{s.n}</div>
+              <div className="font-heading text-2xl md:text-3xl font-bold text-primary">{s.n}</div>
               <div className="text-[10px] text-muted-foreground uppercase tracking-widest mt-1">{s.l}</div>
             </div>
           ))}
