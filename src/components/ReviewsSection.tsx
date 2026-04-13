@@ -1,62 +1,34 @@
 import { Star } from "lucide-react";
 
 const reviews = [
-  {
-    name: "Jessica Sousa",
-    rating: 5,
-    text: "Tive uma experiência muito positiva na Lourenço Motors Automotive. O atendimento foi atencioso, transparente e sempre disponível para esclarecer dúvidas.",
-    time: "há 4 meses",
-  },
-  {
-    name: "Guikiko Cristovao",
-    rating: 5,
-    text: "A minha experiência na Lourenço Motors Automotive superou as expectativas. Desde o primeiro contacto, fui recebido com profissionalismo, simpatia e total transparência.",
-    time: "há 4 meses",
-  },
-  {
-    name: "Sara",
-    rating: 5,
-    text: "Fui recebida por uma equipa super simpática, prestável e sempre com boa disposição durante todo o processo. Tudo foi tratado sempre com profissionalismo.",
-    time: "há 5 meses",
-  },
-  {
-    name: "Encarnação",
-    rating: 5,
-    text: "Recentemente comprei um carro na Lourenço Motors, senti muita confiança e profissionalismo durante todo o atendimento e sem dúvida que recomendaria.",
-    time: "recente",
-  },
+  { name: "Jessica Sousa", text: "O atendimento foi atencioso, transparente e sempre disponível para esclarecer dúvidas.", time: "4 meses" },
+  { name: "Guikiko Cristovao", text: "Desde o primeiro contacto, fui recebido com profissionalismo, simpatia e total transparência.", time: "4 meses" },
+  { name: "Sara", text: "Equipa super simpática, prestável e sempre com boa disposição. Tudo tratado com profissionalismo.", time: "5 meses" },
+  { name: "Encarnação", text: "Senti muita confiança e profissionalismo durante todo o atendimento. Sem dúvida que recomendaria.", time: "recente" },
 ];
 
 const ReviewsSection = () => (
-  <section id="testemunhos" className="py-20 md:py-28">
-    <div className="container mx-auto px-4">
-      <div className="text-center mb-16">
-        <p className="text-primary text-sm tracking-[0.3em] uppercase mb-3 font-semibold">Testemunhos</p>
-        <h2 className="font-heading text-3xl md:text-5xl font-bold mb-4 uppercase">
-          O Que Dizem os <span className="text-gradient-red">Nossos Clientes</span>
-        </h2>
-        <div className="flex items-center justify-center gap-2 mt-4">
-          <div className="flex">
-            {[...Array(5)].map((_, i) => (
-              <Star key={i} className="w-5 h-5 fill-primary text-primary" />
-            ))}
-          </div>
-          <span className="text-foreground font-semibold text-lg">4.8/5</span>
-          <span className="text-muted-foreground text-sm">— 70 avaliações no Google</span>
+  <section id="testemunhos" className="py-24 border-t border-border">
+    <div className="container mx-auto">
+      <div className="flex items-end justify-between mb-12">
+        <div>
+          <p className="text-primary text-[10px] tracking-[0.4em] uppercase font-semibold mb-2">Testemunhos</p>
+          <h2 className="font-heading text-3xl md:text-4xl font-bold uppercase">Clientes</h2>
+        </div>
+        <div className="flex items-center gap-2">
+          <div className="flex">{[...Array(5)].map((_, i) => <Star key={i} className="w-3.5 h-3.5 fill-primary text-primary" />)}</div>
+          <span className="text-sm font-semibold">4.8</span>
+          <span className="text-[10px] text-muted-foreground uppercase tracking-wider">/ 70 reviews</span>
         </div>
       </div>
-      <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+
+      <div className="grid md:grid-cols-2 gap-4">
         {reviews.map((r) => (
-          <div key={r.name} className="p-6 md:p-8 rounded-xl bg-card border border-border hover:border-red transition-all duration-500">
-            <div className="flex gap-1 mb-4">
-              {[...Array(r.rating)].map((_, i) => (
-                <Star key={i} className="w-4 h-4 fill-primary text-primary" />
-              ))}
-            </div>
-            <p className="text-foreground leading-relaxed mb-6 text-sm md:text-base italic">"{r.text}"</p>
-            <div className="flex items-center justify-between">
-              <span className="font-semibold text-sm">{r.name}</span>
-              <span className="text-muted-foreground text-xs">{r.time}</span>
+          <div key={r.name} className="p-6 rounded-xl bg-card border border-border hover:border-primary/30 transition-colors">
+            <p className="text-sm text-foreground/90 leading-relaxed mb-5 italic">"{r.text}"</p>
+            <div className="flex items-center justify-between text-[10px] uppercase tracking-widest">
+              <span className="font-semibold text-foreground">{r.name}</span>
+              <span className="text-muted-foreground">{r.time}</span>
             </div>
           </div>
         ))}
