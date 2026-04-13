@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Menu, X, Phone } from "lucide-react";
+import logo from "@/assets/logo.jpg";
 
 const navLinks = [
   { label: "Início", href: "#inicio" },
@@ -14,10 +15,10 @@ const Navbar = () => {
   const [open, setOpen] = useState(false);
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-glass border-b border-gold">
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-glass border-b border-red">
       <div className="container mx-auto px-4 flex items-center justify-between h-16 md:h-20">
-        <a href="#inicio" className="text-gradient-gold font-heading text-xl md:text-2xl font-bold tracking-wide">
-          LOURENÇO MOTORS
+        <a href="#inicio" className="flex items-center">
+          <img src={logo} alt="Lourenço Motors" className="h-12 md:h-14 w-auto object-contain" />
         </a>
 
         {/* Desktop */}
@@ -36,15 +37,13 @@ const Navbar = () => {
           </a>
         </div>
 
-        {/* Mobile toggle */}
         <button onClick={() => setOpen(!open)} className="lg:hidden text-foreground">
           {open ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
         </button>
       </div>
 
-      {/* Mobile menu */}
       {open && (
-        <div className="lg:hidden bg-glass border-t border-gold animate-fade-in">
+        <div className="lg:hidden bg-glass border-t border-red animate-fade-in">
           <div className="container mx-auto px-4 py-6 flex flex-col gap-4">
             {navLinks.map((l) => (
               <a key={l.href} href={l.href} onClick={() => setOpen(false)} className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors uppercase tracking-wide py-2">

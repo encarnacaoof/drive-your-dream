@@ -31,9 +31,9 @@ const ReviewsSection = () => (
   <section id="testemunhos" className="py-20 md:py-28">
     <div className="container mx-auto px-4">
       <div className="text-center mb-16">
-        <p className="text-primary text-sm tracking-[0.3em] uppercase mb-3">Testemunhos</p>
-        <h2 className="font-heading text-3xl md:text-5xl font-bold mb-4">
-          O Que Dizem os <span className="text-gradient-gold">Nossos Clientes</span>
+        <p className="text-primary text-sm tracking-[0.3em] uppercase mb-3 font-semibold">Testemunhos</p>
+        <h2 className="font-heading text-3xl md:text-5xl font-bold mb-4 uppercase">
+          O Que Dizem os <span className="text-gradient-red">Nossos Clientes</span>
         </h2>
         <div className="flex items-center justify-center gap-2 mt-4">
           <div className="flex">
@@ -47,7 +47,7 @@ const ReviewsSection = () => (
       </div>
       <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
         {reviews.map((r) => (
-          <div key={r.name} className="p-6 md:p-8 rounded-xl bg-card border border-border hover:border-gold transition-all duration-500">
+          <div key={r.name} className="p-6 md:p-8 rounded-xl bg-card border border-border hover:border-red transition-all duration-500">
             <div className="flex gap-1 mb-4">
               {[...Array(r.rating)].map((_, i) => (
                 <Star key={i} className="w-4 h-4 fill-primary text-primary" />

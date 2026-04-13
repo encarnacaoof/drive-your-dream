@@ -4,13 +4,12 @@ const ContactSection = () => (
   <section id="contacto" className="py-20 md:py-28 bg-card">
     <div className="container mx-auto px-4">
       <div className="text-center mb-16">
-        <p className="text-primary text-sm tracking-[0.3em] uppercase mb-3">Contacto</p>
-        <h2 className="font-heading text-3xl md:text-5xl font-bold">
-          Visite-nos ou <span className="text-gradient-gold">Ligue Já</span>
+        <p className="text-primary text-sm tracking-[0.3em] uppercase mb-3 font-semibold">Contacto</p>
+        <h2 className="font-heading text-3xl md:text-5xl font-bold uppercase">
+          Visite-nos ou <span className="text-gradient-red">Ligue Já</span>
         </h2>
       </div>
       <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-        {/* Info */}
         <div className="space-y-6">
           {[
             { icon: MapPin, title: "Morada", info: "R. da Liberdade 19a, 1675-137 Pontinha" },
@@ -18,7 +17,7 @@ const ContactSection = () => (
             { icon: Clock, title: "Horário", info: "Terça a Sábado: 10:00 – 19:00" },
             { icon: Instagram, title: "Instagram", info: "@lourencomotorspt", href: "https://instagram.com/lourencomotorspt" },
           ].map((item) => (
-            <div key={item.title} className="flex items-start gap-4 p-5 rounded-xl bg-secondary">
+            <div key={item.title} className="flex items-start gap-4 p-5 rounded-xl bg-secondary border border-border hover:border-red transition-colors">
               <item.icon className="w-5 h-5 text-primary mt-0.5 shrink-0" />
               <div>
                 <h4 className="font-semibold text-sm mb-1">{item.title}</h4>
@@ -33,7 +32,6 @@ const ContactSection = () => (
             </div>
           ))}
         </div>
-        {/* Map */}
         <div className="rounded-xl overflow-hidden border border-border h-[350px] md:h-full min-h-[300px]">
           <iframe
             title="Lourenço Motors Localização"
